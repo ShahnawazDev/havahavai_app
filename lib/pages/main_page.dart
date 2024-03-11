@@ -78,6 +78,9 @@ class _MainPageState extends State<MainPage> {
                   });
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
               _sections[_currentIndex],
             ],
           ),
