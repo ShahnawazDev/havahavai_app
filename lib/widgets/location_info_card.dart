@@ -38,71 +38,74 @@ class LocationInfoCard extends StatelessWidget {
           ),
           Card(
             margin: const EdgeInsets.all(10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InfoColumn(
-                      icon: Icons.cloudy_snowing,
-                      mainText: '19 C',
-                      subText: 'Cloudy',
-                    ),
-                    InfoColumn(
-                      icon: Icons.calendar_today,
-                      mainText: '30 Jan',
-                      subText: 'Mon',
-                    ),
-                    InfoColumn(
-                      icon: Icons.access_time_filled,
-                      mainText: '12:00',
-                      subText: 'Local time',
-                    ),
-                    InfoColumn(
-                      icon: Icons.credit_card,
-                      mainText: 'AED',
-                      subText: '1\$ = 3.67 AED',
-                    ),
-                  ],
-                ),
-                const Divider(),
-                IntrinsicHeight(
-                  child: Row(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      TextButton.icon(
-                        onPressed: () {},
-                        icon: const Icon(Icons.directions,
-                            color: Colors.blue, size: 15),
-                        label: const Text(
-                          'Get direction',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black,
-                          ),
-                        ),
+                    children: [
+                      InfoColumn(
+                        svgIcon: 'assets/icons/cloud.svg',
+                        mainText: '19 C',
+                        subText: 'Cloudy',
                       ),
-                      const VerticalDivider(),
-                      TextButton.icon(
-                        onPressed: () {},
-                        icon: const Icon(Icons.call,
-                            color: Colors.blue, size: 15),
-                        label: const Text(
-                          'Call airport',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black,
-                          ),
-                        ),
+                      InfoColumn(
+                        svgIcon: 'assets/icons/calender.svg',
+                        mainText: '30 Jan',
+                        subText: 'Mon',
+                      ),
+                      InfoColumn(
+                        svgIcon: 'assets/icons/time.svg',
+                        mainText: '12:00',
+                        subText: 'Local time',
+                      ),
+                      InfoColumn(
+                        svgIcon: 'assets/icons/currency.svg',
+                        mainText: 'AED',
+                        subText: '1\$ = 3.67 AED',
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(
-                  height: 5,
-                )
-              ],
+                  const Divider(),
+                  IntrinsicHeight(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        TextButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.directions,
+                              color: Colors.blue, size: 15),
+                          label: const Text(
+                            'Get direction',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        const VerticalDivider(),
+                        TextButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.call,
+                              color: Colors.blue, size: 15),
+                          label: const Text(
+                            'Call airport',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  )
+                ],
+              ),
             ),
           ),
         ],

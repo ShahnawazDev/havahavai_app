@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class InfoColumn extends StatelessWidget {
-  final IconData icon;
   final String mainText;
   final String subText;
+  final String svgIcon;
 
   const InfoColumn({
     super.key,
-    required this.icon,
+    required this.svgIcon,
     required this.mainText,
     required this.subText,
   });
@@ -17,9 +18,10 @@ class InfoColumn extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(children: [
-        Icon(
-          icon,
-          size: 16,
+        SvgPicture.asset(
+          svgIcon,
+          height: 16,
+          width: 16,
         ),
         Text(mainText,
             style: const TextStyle(

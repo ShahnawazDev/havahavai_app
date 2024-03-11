@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:havahavai_app/widgets/teminal_button.dart';
 
 class SelfParking extends StatefulWidget {
@@ -7,7 +8,6 @@ class SelfParking extends StatefulWidget {
   @override
   State<SelfParking> createState() => _SelfParkingState();
 }
-
 
 class _SelfParkingState extends State<SelfParking> {
   int currentTerminal = 1;
@@ -23,7 +23,7 @@ class _SelfParkingState extends State<SelfParking> {
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const Text(
-          "Public Transport",
+          "Self Parking",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -57,10 +57,24 @@ class _SelfParkingState extends State<SelfParking> {
           children: [
             Row(
               children: [
-                const Icon(Icons.directions_bike),
-                const Expanded(child: Text('Two wheeler')),
-                const Text('AED 50/day'),
+                SvgPicture.asset(
+                  'assets/icons/two_wheeler.svg',
+                  height: 16,
+                  width: 16,
+                ),
+                const SizedBox(width: 8.0),
+                const Expanded(
+                  child: Text(
+                    'Two wheeler',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                const Text(
+                  'AED 50 / day',
+                  style: TextStyle(fontSize: 16),
+                ),
                 IconButton(
+                  iconSize: 11,
                   onPressed: () {},
                   icon: const Icon(Icons.info_outline),
                 ),
@@ -68,10 +82,26 @@ class _SelfParkingState extends State<SelfParking> {
             ),
             Row(
               children: [
-                const Icon(Icons.directions_car),
-                const Expanded(child: Text('Car Parking')),
-                const Text('AED 100/day'),
+                SvgPicture.asset(
+                  'assets/icons/car.svg',
+                  height: 16,
+                  width: 16,
+                ),
+                const SizedBox(width: 8.0),
+                const Expanded(
+                  child: Text(
+                    'Car Parking',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                const Text(
+                  'AED 100 / day',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
                 IconButton(
+                  iconSize: 11,
                   onPressed: () {},
                   icon: const Icon(Icons.info_outline),
                 ),
@@ -79,10 +109,19 @@ class _SelfParkingState extends State<SelfParking> {
             ),
             Row(
               children: [
-                const Icon(Icons.directions_car),
+                SvgPicture.asset(
+                  'assets/icons/electric_car.svg',
+                  height: 16,
+                  width: 16,
+                ),
+                const SizedBox(width: 8.0),
                 const Expanded(child: Text('Electric Car Parking')),
-                const Text('AED 150/day'),
+                const Text(
+                  'AED 150 / day',
+                  style: TextStyle(fontSize: 16),
+                ),
                 IconButton(
+                  iconSize: 11,
                   onPressed: () {},
                   icon: const Icon(Icons.info_outline),
                 ),

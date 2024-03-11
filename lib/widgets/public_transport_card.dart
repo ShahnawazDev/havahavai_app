@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class PublicTransportCard extends StatelessWidget {
   const PublicTransportCard({super.key});
@@ -28,7 +29,11 @@ class PublicTransportCard extends StatelessWidget {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Icon(Icons.train),
+              SvgPicture.asset(
+                'assets/icons/metro.svg',
+                height: 20,
+                width: 20,
+              ),
               const SizedBox(width: 8.0),
               const Expanded(
                 child: Text(
@@ -55,7 +60,11 @@ class PublicTransportCard extends StatelessWidget {
           const Divider(),
           Row(
             children: [
-              const Icon(Icons.directions_bus),
+              SvgPicture.asset(
+                'assets/icons/bus.svg',
+                height: 20,
+                width: 20,
+              ),
               const SizedBox(width: 8.0),
               const Expanded(
                 child: Text(
