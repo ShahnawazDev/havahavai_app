@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/public_transport_card.dart';
-import '../widgets/self_parking.dart';
-import '../widgets/taxi_services_card.dart';
+import '../../widgets/public_transport_card.dart';
+import '../../widgets/self_parking.dart';
+import '../../widgets/taxi_services_card.dart';
 
 class Transport extends StatelessWidget {
   const Transport({super.key});

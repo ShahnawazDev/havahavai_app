@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/contact_row.dart';
+import '../../widgets/contact_row.dart';
 
 class Contact extends StatelessWidget {
   const Contact({super.key});

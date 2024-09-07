@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/expandable_text_tile.dart';
+import '../../widgets/expandable_text_tile.dart';
 
 class Forex extends StatelessWidget {
   const Forex({super.key});

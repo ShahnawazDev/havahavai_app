@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:havahavai_app/pages/contact.dart';
-import 'package:havahavai_app/pages/forex.dart';
-import 'package:havahavai_app/pages/terminal.dart';
-import 'package:havahavai_app/pages/transport.dart';
+import 'package:havahavai_app/pages/main_page_sections/contact.dart';
+import 'package:havahavai_app/pages/main_page_sections/forex.dart';
+import 'package:havahavai_app/pages/main_page_sections/terminal.dart';
+import 'package:havahavai_app/pages/main_page_sections/transport.dart';
 
 import '../widgets/location_info_card.dart';
 import '../widgets/navigation_buttons_row.dart';
